@@ -18,7 +18,7 @@ A Quantum Amplitude Estimation (QAE) framework for computing Conditional Value-a
 ├── notebooks/
 │   ├── 01_Threshold_Optimization.ipynb       # A-D statistic threshold search
 │   ├── 02_Distribution_Comparison.ipynb      # Spliced vs single-model benchmarking
-│   ├── 03_Quantum_Grid_Log_Binning.ipynb     # Log vs linear discretization proof
+│   ├── 03_CVaR_Transformation_and_Log_Binning.ipynb     # Log vs linear discretization proof
 │   └── 04_MLQAE_Convergence_Benchmarking.ipynb  # QAE vs Monte Carlo convergence
 ├── src/
 │   ├── distribution_fit.py           # EVT fitting & spliced CDF
@@ -44,7 +44,7 @@ Then open `notebooks/01_Threshold_Optimization.ipynb` and run sequentially throu
 
 **2. Spliced Distribution** — A Lognormal body and GPD tail are joined at the optimized threshold, with a probability anchor $W$ ensuring CDF continuity.
 
-**3. CVaR Decomposition** — CVaR is split into a classically computed VaR threshold plus a quantum-estimated Expected Excess Loss (EEL), following Rockafellar-Uryasev.
+**3. CVaR Trsnsformation** — CVaR is split into a classically computed VaR threshold plus a quantum-estimated Expected Excess Loss (EEL), following Rockafellar-Uryasev.
 
 **4. Quantum Encoding** — The spliced distribution is discretized onto a $2^n$-state log-spaced grid and loaded via tree-based controlled-RY rotations. A pricing oracle encodes the payoff function into an ancilla qubit.
 
